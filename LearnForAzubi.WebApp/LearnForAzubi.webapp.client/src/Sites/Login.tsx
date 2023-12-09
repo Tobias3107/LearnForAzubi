@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import style from './Login.module.css';
 import 'bootstrap';
 
 function Login() {
@@ -9,7 +8,7 @@ function Login() {
     const [passwordVisible, setPasswordVisible] = useState(false);
     
     return (
-        <div className={ style.LoginRoot }>
+        <div>
             <h1>Login</h1>
             <table>
                 <tbody>
@@ -18,7 +17,7 @@ function Login() {
                             <label>Username</label>
                         </td>
                         <td>
-                            <input className={ style.username } type="text" id="username" name="username" />
+                            <input type="text" id="username" name="username" />
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +27,6 @@ function Login() {
                         <td>
                             <div>
                                 <input
-                                    className={ style.password }
                                     type={
                                         passwordVisible ? "text" : "password"
                                     } id="password" name="password"

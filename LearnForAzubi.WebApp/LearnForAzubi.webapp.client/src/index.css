@@ -71,6 +71,11 @@ tr > td {
     padding-bottom: .5em;
 }
 
+.password {
+    font-size: 17px;
+    width: 83%;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
