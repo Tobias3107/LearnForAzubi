@@ -8,54 +8,56 @@ function Login() {
     const [passwordVisible, setPasswordVisible] = useState(false);
     
     return (
-        <div>
-            <h1>Login</h1>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <label>Username</label>
-                        </td>
-                        <td>
-                            <input type="text" id="username" name="username" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Password</label>
-                        </td>
-                        <td>
-                            <div>
-                                <input
-                                    type={
-                                        passwordVisible ? "text" : "password"
-                                    } id="password" name="password"
-                                    value={Password}
-                                    onChange={(e) =>
-                                        setPassword(e.target.value)
-                                    } />
-                                <span>
-                                    {
-                                        <FontAwesomeIcon
-                                            icon={passwordVisible ? faEye : faEyeSlash}
-                                            onClick={() => setPasswordVisible(!passwordVisible)}
-                                        />
-                                    }
-                                </span>
-                            </div>
+        <div className="centerCenter">
+            <h2>Login</h2>
+            <div>
+                <table className="loginTable">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Username</label>
+                            </td>
+                            <td>
+                                <input type="text" id="username" name="username" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Password</label>
+                            </td>
+                            <td>
+                                <div>
+                                    <input
+                                        type={
+                                            passwordVisible ? "text" : "password"
+                                        } id="password" name="password"
+                                        value={Password}
+                                        onChange={(e) =>
+                                            setPassword(e.target.value)
+                                        } />
+                                    <span>
+                                        {
+                                            <FontAwesomeIcon
+                                                icon={passwordVisible ? faEye : faEyeSlash}
+                                                onClick={() => setPasswordVisible(!passwordVisible)}
+                                            />
+                                        }
+                                    </span>
+                                </div>
                         
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2}>
-                            <input
-                                type="button"
-                                value="Einloggen"
-                                />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan={2}>
+                                <input
+                                    type="button"
+                                    value="Einloggen"
+                                    />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }

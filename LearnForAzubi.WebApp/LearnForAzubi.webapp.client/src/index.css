@@ -1,90 +1,137 @@
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+    display: block;
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+footer {
+    position: fixed;
+    bottom: 2rem;
+    right: 10%;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+footer * {
+    margin: 5px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+li, a, button {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ebe1e1;
+    text-decoration: none;
 }
-button:hover {
-  border-color: #646cff;
+
+.logo {
+    cursor: pointer;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+
+button, input[type=button] {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover, .selected {
+    background-color: rgba(0, 75, 169, 1);
+}
+
+.content {
+    padding: 0% 10%;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    height: 100%!important;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.loginTable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginTable > tbody > tr > td {
+    padding-top: 10px;
+    align-items: start;
+    align-content: start;
+    text-align: start;
+}
+
+.loginTable span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+}
+
+.loginTable input[type=button] {
+    float: right;
+    margin-right: 30px;
 }
 
 input {
-    font-size: 17px;
-    width: 90%;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 5px solid rgba(0, 136, 169, 1);
+    background-color: #025265;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
-label {
-    margin-right: .8rem;
-    font-size: 17px;
+input[type=text]:hover, input[type=text]:focus,
+input[type=password]:hover, input[type=password]:focus {
+    border-color: rgba(0, 75, 169, 1);
+    background-color: rgba(0, 75, 169, .4);
+    outline: none;
 }
 
-input {
-    font-size: 17px;
-    width: 90%;
+.loginTable label {
+    padding-right: 2rem;
+
 }
 
-tr > td {
-    padding-bottom: .5em;
+.box {
+    border: 5px solid rgba(0, 136, 169, 1);
+    border-radius: 10px;
+    min-width: 200px;
+    width: 40%;
+    height: 60vh;
+    min-height: 400px;
 }
 
-.password {
-    font-size: 17px;
-    width: 83%;
+.centerCenter {
+    margin-top: 10%;
+
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
